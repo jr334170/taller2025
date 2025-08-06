@@ -21,11 +21,10 @@
       service: "{{ item }}" 
       state: enabled
       permanent: true
-      immediate: true
+      inmediate: true
     loop:
         - http
         - https
-
   - name: "TASK5 archivo indice customizado"
     ansible.builtin.template:
       src: ../templates/index.j2
